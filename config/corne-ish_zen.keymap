@@ -53,8 +53,8 @@
                             bindings = <
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans 
    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &to DEFAULT   &trans &trans &trans &trans &trans &tog SYMBOLS
-                 &trans &trans &trans   &trans &trans &tog MEDIA
+   &trans &trans &trans &trans &trans &to DEFAULT   &trans &trans &trans &trans &trans &to SYMBOLS
+                 &trans &trans &trans   &trans &trans &to MEDIA
                         >;
                 };
                 
