@@ -23,7 +23,7 @@
    &kp LBKT  &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp RBKT 
    &kp TAB   &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo SYMBOLS
-              &kp LGUI &kp LCTL &kp SPC       &kp RET &kp BKSP       &mo CONTROL
+              &kp LGUI &kp LCTL &kp SPC       &kp RET &kp BKSP       &mo MEDIA
                         >;
                 };
                 symbol_layer {
@@ -40,7 +40,7 @@
                         bindings = <
    &kp F1 &kp F2     &kp F3       &kp F4       &kp F5     &kp F6   &kp F7  &kp F8   &kp F9      &kp F10 &kp F11 &kp F12
    &trans &kp K_PREV &kp k_VOL_DN &kp k_VOL_UP &kp k_NEXT &none    &kp INS &kp HOME &kp PG_UP   &none   &none   &none 
-   &LALT  &none      &none        &none        &none      &none    &kp DEL &kp END  &kp PG_DN   &none   &none   &tog CONTROL
+   &LALT  &none      &none        &none        &none      &none    &kp DEL &kp END  &kp PG_DN   &none   &none   &tog MEDIA
                              &kp RGUI &kp LCTL &kp k_PLAY_PAUSE    &kp k_MUTE &trans &trans
                         >;
                 };
