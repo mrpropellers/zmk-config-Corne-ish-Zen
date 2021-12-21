@@ -52,7 +52,7 @@
                         label = "MODIFY";
                             bindings = <
    &trans &trans &trans &trans &trans &kp ESC   &trans &trans &trans &trans &trans &trans 
-   &trans &trans &trans &trans &trans &trans   &none &kp LEFT &kp DOWN &kp UP &kp RIGHT &tog MODIFY
+   &trans &trans &trans &trans &trans &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &tog MODIFY
    &trans &trans &trans &trans &trans &trans   &none  &none  &none  &none  &none  &tog SYMBOLS
                  &trans &trans &trans          &trans &kp DEL &kp BKSP
                         >;
