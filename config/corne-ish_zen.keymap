@@ -23,25 +23,25 @@
    &kp LBKT  &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo SYMBOLS
-              &kp LGUI &kp LCTRL &kp SPACE    &kp RET &kp BKSP  &mo CONTROL
+              &kp LGUI &kp LCTRL &kp SPACE    &kp RET &kp BKSP       &mo CONTROL
                         >;
                 };
                 symbol_layer {
                         label = "NUMBER";
                         bindings = <
    &kp ESC   &kp N1  &kp N2 &kp N3 &kp N4 &kp N5   &kp N6    &kp N7   &kp N8   &kp N9 &kp N0    &kp GRAVE
-   &kp TAB   &kp N6  &kp N7 &kp N8 &kp N9 &kp N0   &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
-   &kp LSHFT &trans  &trans &trans &trans &trans   &kp MINUS &trans   &trans   &trans &kp FSLH  &trans 
-                   &tog BASE &kp LCTRL &kp SPACE   &kp RET &kp DEL &tog SYMBOLS
+   &trans    &kp N6  &kp N7 &kp N8 &kp N9 &kp N0   &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT
+   &trans    &none  &none &none &none &none        &kp MINUS &none    &none    &none  &kp FSLH  &trans 
+                   &trans &kp LCTRL &kp SPACE   &kp RET &kp DEL    &tog SYMBOLS
                         >;
                 };
                 control_layer {
                         label = "CONTROL";
                         bindings = <
    &kp F1 &kp F2     &kp F3       &kp F4       &kp F5     &kp F6   &kp F7  &kp F8   &kp F9      &kp F10 &kp F11 &kp F12
-   &trans &kp K_PREV &kp k_VOL_DN &kp k_VOL_UP &kp k_NEXT &trans   &kp INS &kp HOME &kp PG_UP   &trans  &trans  &trans
-   &LALT  &trans     &trans       &trans       &trans     &trans   &kp DEL &kp END  &kp PG_DOWN &trans  &trans  &tog CONTROL
-                             &kp RGUI &kp LCTRL &kp k_PLAY_PAUSE   &kp k_MUTE &tog BASE &trans
+   &trans &kp K_PREV &kp k_VOL_DN &kp k_VOL_UP &kp k_NEXT &none    &kp INS &kp HOME &kp PG_UP   &none   &none   &none 
+   &LALT  &none      &none        &none        &none      &none    &kp DEL &kp END  &kp PG_DOWN &none   &none   &tog CONTROL
+                             &kp RGUI &kp LCTRL &kp k_PLAY_PAUSE   &kp k_MUTE &trans &trans
                         >;
                 };
 
