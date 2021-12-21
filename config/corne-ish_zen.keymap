@@ -33,27 +33,30 @@
                         label = "SYMBOL"; 
                         bindings = <
    &kp GRAVE   &kp N1  &kp N2 &kp N3 &kp N4 &kp N5   &kp N6    &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
-   &trans    &trans &trans &trans &trans &trans     &kp EQUAL    &none &none &none &none &tog MODIFY
-   &trans    &trans  &trans &trans &trans &trans     &kp MINUS &none    &none    &none  &none  &trans
-                            &trans &trans &trans   &trans &trans  &trans
+   &trans    &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT     &kp EQUAL    &kp PLUS &none &none &trans &trans
+   &trans    &kp CARET  &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR     &kp MINUS &kp UNDER &none &none  &trans  &to DEFAULT
+                            &trans &trans &trans   &trans &trans  &tog MODIFY
                         >;
                 };
+                // TODO: Move rarely used keys to different layer
                 control_layer {
                         label = "MEDIA";
                         bindings = <
    &kp F1 &kp F2     &kp F3       &kp F4       &kp F5     &kp F6   &kp F7  &kp F8   &kp F9      &kp F10 &kp F11 &kp F12
-   &trans &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none    &kp INS &kp HOME &kp PG_UP   &none   &none   &trans 
-   &trans  &trans &none &none &none &to BT_BUFFER    &kp DEL &kp END  &kp PG_DN   &none   &none   &trans
+   &to DEFAULT &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none    &kp INS &kp HOME &kp PG_UP   &none   &none   &trans 
+   &trans  &trans &none &none &none &to BT_BUFFER    &kp DEL &kp END  &kp PG_DN   &none   &none   &to DEFAULT
                              &kp LALT &kp LCTL &kp C_PLAY_PAUSE    &kp C_MUTE &trans &to DEFAULT
                         >;
                 };
+                
+                
                 
                  nav_layer {
                         label = "MODIFY";
                             bindings = <
    &trans &trans &trans &trans &trans &kp ESC   &trans &trans &trans &trans &trans &trans 
-   &trans &trans &trans &trans &trans &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &tog MODIFY
-   &trans &trans &trans &trans &trans &trans   &none  &none  &none  &none  &none  &trans
+   &trans &trans &to SYMBOLS &trans &trans &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &trans
+   &trans &trans &trans &trans &trans &trans   &none  &to MEDIA  &none  &none  &none  &trans
                  &trans &trans &trans          &trans &trans &trans
                         >;
                 };
