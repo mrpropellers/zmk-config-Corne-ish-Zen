@@ -30,7 +30,7 @@
    &kp LBKT  &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp RBKT 
    &lt MODIFY TAB &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo SYMBOLS
-              &kp LGUI &kp LCTL &kp RET       &kp SPC &kp BKSP &kp DEL
+              &kp LALT &kp LCTL &kp RET       &kp SPC &kp BKSP &kp DEL
                         >;
                 };
                 symbol_layer {
@@ -61,7 +61,7 @@
    &kp LS(LBKT) &trans &trans &trans &trans &kp ESC   &trans &trans &trans &kp LS(9) &kp LS(0) &kp LS(RBKT) 
    &trans &kp LS(A) &trans &trans &trans &trans    &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
    &trans &trans &trans &trans &kp LS(V) &trans   &to SYMBOLS  &to MEDIA  &trans  &trans  &trans  &trans
-                 &kp LALT &trans &trans          &trans &kp DEL &trans
+                 &kp LGUI &trans &trans          &trans &kp DEL &trans
                         >;
                 };
                 
