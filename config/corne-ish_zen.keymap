@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define SYMBOLS 1
-#define MEDIA 2
-#define MODIFY 3
-#define BT_BUFFER 4
+#define NUMBERS 1
+#define SYMBOLS 2
+#define MEDIA 3
+#define MODIFY 4
 #define BLUETOOTH 5
 
 &lt {
@@ -30,16 +30,27 @@
    &kp LBKT  &kp Q &kp W &kp E &kp R &kp T    &kp Y &kp U  &kp I     &kp O   &kp P    &kp RBKT 
    &lt MODIFY TAB &kp A &kp S &kp D &kp F &kp G    &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B    &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mo SYMBOLS
-              &kp LALT &kp LCTL &kp RET       &kp SPC &kp BKSP &kp DEL
+              &kp LALT &kp LCTL &kp RET       &kp SPC &lt NUMBERS BKSP &kp DEL
                         >;
                 };
+                
+             num_layer {
+                        label = "NUMBER";
+                            bindings = <
+   &trans &kp 1 &kp 2 &kp 3 &kp 4 &kp 5   &kp 6 &kp 7 &kp 8 &kp 9 &kp 0 &trans 
+   &trans &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                 &trans &trans &trans          &trans &trans &trans
+                        >;
+                };
+                
                 symbol_layer {
                         label = "SYMBOL"; 
                         bindings = <
-   &kp GRAVE   &kp N1  &kp N2 &kp N3 &kp N4 &kp N5   &kp N6    &kp N7   &kp N8   &kp N9 &kp N0    &kp BSLH
-   &trans    &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT     &kp EQUAL    &kp PLUS &none &none &trans &trans
-   &trans    &kp CARET  &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR     &kp MINUS &kp UNDER &none &none  &trans  &to DEFAULT
-                            &trans &trans &trans   &trans &trans  &tog MODIFY
+   &kp GRAVE   &trans  &trans &trans &trans &trans   &trans  &trans   &trans   &trans &trans    &kp BSLH
+   &trans    &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT     &kp EQUAL    &kp PLUS &trans &trans &trans &trans
+   &trans    &kp CARET  &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR     &kp MINUS &kp UNDER &trans &trans  &trans  &trans
+                            &trans &trans &trans   &trans &trans  &trans
                         >;
                 };
                 // TODO: Move rarely used keys to different layer
@@ -48,7 +59,7 @@
                         bindings = <
    &kp F1 &kp F2     &kp F3       &kp F4       &kp F5     &kp F6   &kp F7  &kp F8   &kp F9      &kp F10 &kp F11 &kp F12
    &to DEFAULT &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none    &kp INS &kp HOME &kp PG_UP   &none   &none   &trans 
-   &trans  &trans &none &none &none &to BT_BUFFER    &kp DEL &kp END  &kp PG_DN   &none   &none   &to DEFAULT
+   &trans  &trans &none &none &none &to BLUETOOTH    &kp DEL &kp END  &kp PG_DN   &none   &none   &to DEFAULT
                              &trans &trans &kp C_PLAY_PAUSE    &kp C_MUTE &trans &to DEFAULT
                         >;
                 };
@@ -60,18 +71,8 @@
                             bindings = <
    &kp LS(LBKT) &trans &trans &trans &trans &kp ESC   &trans &trans &trans &kp LS(9) &kp LS(0) &kp LS(RBKT) 
    &trans &kp LS(A) &trans &trans &trans &trans    &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans &trans &trans &trans &kp LS(V) &trans   &to SYMBOLS  &to MEDIA  &trans  &trans  &trans  &trans
-                 &kp LGUI &trans &trans          &trans &kp DEL &trans
-                        >;
-                };
-                
-                 bluetooth_buffer {
-                        label = "BT-OTW";
-                        bindings = <
-   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans 
-   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-   &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                        &trans &trans &trans   &to BLUETOOTH &trans &trans
+   &trans &trans &trans &trans &kp LS(V) &trans   &trans  &trans  &trans  &trans  &trans  &trans
+                 &kp LGUI &trans &trans          &trans &kp DEL &tog MEDIA
                         >;
                 };
                
@@ -80,9 +81,9 @@
                         label = "BLU2TH";
                         bindings = <
    &none  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none
-   &none  &none  &none  &none  &bt BT_CLR  &none    &none  &bt BT_CLR  &none  &none  &none  &none
-   &none  &to DEFAULT  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                  &trans &trans &to DEFAULT    &to DEFAULT &none &none
+   &none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &bt BT_CLR  &none  &none    &none  &none  &none  &none  &none  &none
+                  &trans &trans &to DEFAULT    &to DEFAULT &none &to DEFAULT
                         >;
                 };
 
