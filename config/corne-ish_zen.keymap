@@ -30,7 +30,7 @@
   &kp LEFT_BRACKET  &kp Q  &kp W  &kp E         &kp R        &kp T        &kp Y          &kp U       &kp I          &kp O    &kp P          &kp RIGHT_BRACKET
   &lt 1 TAB         &kp A  &kp S  &kp D         &kp F        &kp G        &kp H          &kp J       &kp K          &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
   &kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V        &kp B        &kp N          &kp M       &kp COMMA      &kp DOT  &kp SLASH      &mo 2
-                                  &kp LEFT_ALT  &lt 4 ENTER  &kp SPACE    &kp BACKSPACE  &kp DELETE  &kp RIGHT_GUI
+                                  &kp LEFT_ALT  &kp LCTRL    &lt 4 ENTER  &kp SPACE      &kp BACKSPACE  &kp DELETE  
               >;
           };
   
@@ -69,7 +69,7 @@
               bindings = <
   &kp LBRC  &trans     &trans  &trans        &trans     &kp ESCAPE    &trans  &trans          &trans    &trans        &trans     &kp RBRC
   &trans    &kp LS(A)  &trans  &trans        &trans     &trans        &trans  &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
-  &trans    &trans     &trans  &trans        &kp LS(V)  &trans        &trans  &to 3           &trans    &trans        &trans     &trans
+  &trans    &trans     &trans  &trans        &kp LS(V)  &to 5         &trans  &to 3           &trans    &trans        &trans     &trans
                                &kp LEFT_GUI  &trans     &trans        &trans  &kp DEL         &trans
               >;
           };
