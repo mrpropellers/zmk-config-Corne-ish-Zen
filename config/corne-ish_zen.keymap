@@ -21,17 +21,6 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_gamer_layer {
-            timeout-ms = <50>;
-            key-positions = <1 2 3 4 >;
-            bindings = <&to 6>;
-        };
-    };
-};
-
-/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -58,7 +47,7 @@
           layer2 {
                 label = "SYMBOL";
               bindings = <
-  &kp GRAVE  &trans     &trans    &trans    &trans    &trans       &trans     &trans     &trans  &trans  &trans  &kp BACKSLASH
+  &kp GRAVE  &trans     &trans    &trans    &trans    &trans       &to 6     &trans     &trans  &trans  &trans  &kp BACKSLASH
   &trans     &kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp EQUAL  &kp PLUS   &trans  &trans  &trans  &trans
   &trans     &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR     &kp MINUS  &kp UNDER  &trans  &trans  &trans  &trans
                                   &trans    &trans    &trans       &trans     &trans     &trans
@@ -103,7 +92,7 @@
                         bindings = <
    &kp ESC  &trans &trans  &trans  &trans &trans    &kp F1      &kp F1      &kp F3       &kp F4      &kp F5      &kp F6
    &kp TAB  &trans &trans  &trans  &trans &trans    &none  &none  &none  &none  &none  &none
-   &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5   &none  &none  &none  &none  &none  &none
+   &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp B   &none  &none  &none  &none  &none  &none
                   &mo 7 &trans &kp SPACE            &kp ENTER &to DEFAULT &to DEFAULT
                         >;
                 };
@@ -111,11 +100,11 @@
         };
 
         layer7 {
-                label = "GAMER";
+                label = "GAMER2";
               bindings = <
   &trans    &trans     &trans   &trans    &trans     &trans        &trans    &trans     &trans  &trans    &trans     &trans
   &trans    &trans      &trans  &trans    &trans     &trans   &trans    &trans     &trans  &trans    &trans     &trans
-  &kp LCTRL &kp z       &kp x    &kp c    &kp v      &kp b     &trans    &trans     &trans  &trans    &trans     &trans
+  &kp LCTRL &kp Z       &kp X    &kp C    &kp V      &kp N5     &trans    &trans     &trans  &trans    &trans     &trans
                                &trans  &trans     &trans        &trans      &trans         &trans
               >;
           };
