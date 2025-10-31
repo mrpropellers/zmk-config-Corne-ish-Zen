@@ -21,8 +21,8 @@
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+            compatible = "zmk,keymap";
 
          layer0 {
                 label = "DEFAULT";
@@ -85,7 +85,7 @@
                         >;
                 };
 
-        };
+
 
                 layer6 {
                         label = "GAMER";
@@ -97,7 +97,6 @@
                         >;
                 };
 
-        };
 
         layer7 {
                 label = "GAMER2";
@@ -108,4 +107,5 @@
                                &trans  &trans     &trans        &trans      &trans         &trans
               >;
           };
+    };
 };
